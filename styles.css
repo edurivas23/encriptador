@@ -201,6 +201,9 @@ header{
 /*diseño responsivo*/
 
 @media (max-width:1200px){
+    body{
+        overflow: visible;
+    }
     .contenido{
         display: flex;
         flex-direction: column;
