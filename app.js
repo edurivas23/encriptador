@@ -8,7 +8,7 @@ const cajaMuestra  = document.querySelector("#caja_muestra");
 function botonEncriptar(){
 const textoEscrito = encriptar(cajaTexto.value);
 let mensajes = document.querySelector(".mensajes");
-if (textoEscrito== '' || textoEscrito !== textoEscrito.toLowerCase() || /[áéíóúÁÉÍÓÚ]/.test(textoEscrito) ){
+if (textoEscrito== '' || textoEscrito !== textoEscrito.toLowerCase() || /[áéíóúÁÉÍÓÚ]/.test(textoEscrito)||/[^a-z0-9\s]/.test(textoEscrito) ){
     mostrarAlerta();
     
 }
@@ -27,7 +27,7 @@ cajaTexto.value = "";
 function botonDesencriptar(){
     const textoEscrito = desencriptar(cajaTexto.value);
     let mensajes = document.querySelector(".mensajes");
-    if (textoEscrito== '' || textoEscrito !== textoEscrito.toLowerCase() || /[áéíóúÁÉÍÓÚ]/.test(textoEscrito) || /^[a-zA-Z0-9\s]*$/.test(textoEscrito)){
+    if (textoEscrito== '' || textoEscrito !== textoEscrito.toLowerCase() || /[áéíóúÁÉÍÓÚ]/.test(textoEscrito) || /[^a-z0-9\s]/.test(textoEscrito)){
         mostrarAlerta();
         
     }
